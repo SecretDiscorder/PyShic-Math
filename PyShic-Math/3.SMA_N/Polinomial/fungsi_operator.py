@@ -47,7 +47,11 @@ def main():
     elif operator == '*':
         result_expr = f_x_expr * g_x_expr
     elif operator == '/':
-        result_expr = f_x_expr / g_x_expr
+
+        result_expr, _ = sp.div(f_x_expr, g_x_expr)  # Gunakan sp.div() untuk pembagian polinomial
+    elif operator == '%':
+        quotient, remainder = sp.div(f_x_expr, g_x_expr)  # Gunakan sp.div() untuk pembagian polinomial
+        result_expr = remainder
     else:
         print("Operator matematika tidak valid. Silakan gunakan '+', '-', '*', atau '/'.")
         return
