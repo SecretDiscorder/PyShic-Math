@@ -1,0 +1,1 @@
+exec(""";/storage/emulated/0/PyShic/barisan.py;""")
